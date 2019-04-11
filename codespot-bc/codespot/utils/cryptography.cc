@@ -6,15 +6,14 @@ Licensed under the Apache License, Version 2.0 (the "License");
 @date: 2019-04-11
 ==============================================================================*/
 
-#ifndef CODESPOT_UTILS_CRYPTOGRAPHY_H_
-#define CODESPOT_UTILS_CRYPTOGRAPHY_H_
+#include <cryptopp/rsa.h>
 
+#include "codespot/utils/cryptography.h"
+
+// using namespace CryptoPP;
 
 namespace codespot {
 
 
 
 } // end namespace codespot
-
-#endif // !CODESPOT_UTILS_CRYPTOGRAPHY_H_
-

@@ -10,11 +10,14 @@ Eigen/grpc/Crypto++
 
 #include <iostream>
 
+
 #include "codespot/utils/cryptography.h"
 
-int main(int args, char** argv) 
-{
+using namespace std;
 
 
+int main(int args, char** argv) {
+
+	system("pause");
 	return 0;
 }
