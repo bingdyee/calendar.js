@@ -9,20 +9,34 @@ Eigen/grpc/Crypto++
 ==============================================================================*/
 
 #include <iostream>
-
+#include <thread>
 
 #include "codespot/utils/cryptography.h"
+#include "codespot/utils/logger.h"
+#include "codespot/utils/time_util.h"
+#include "codespot/utils/snowflake.h"
+#include "codespot/utils/countdownlatch.h"
 
 using namespace std;
+using namespace codespot;
 
-void test() {
+class B {
 
-}
+public:
+	void hello(std::string& m) {
+		std::cout << m << std::endl;
+	}
+
+
+};
 
 
 int main(int args, char** argv) {
 	
-	test();
+	Countdownlatch latch(6);
+	B b;
+	std::string a = "Hello";
+	latch.Start(&B::hello, &b, a);
 
 	system("pause");
 	return 0;
