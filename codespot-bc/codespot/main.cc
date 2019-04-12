@@ -15,8 +15,14 @@ Eigen/grpc/Crypto++
 
 using namespace std;
 
+void test() {
+
+}
+
 
 int main(int args, char** argv) {
+	
+	test();
 
 	system("pause");
 	return 0;
