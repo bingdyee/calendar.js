@@ -12,7 +12,7 @@ Licensed under the Apache License, Version 2.0 (the "License");
 #include <chrono>
 #include <sstream>
 
-#include "codespot/utils/snowflake.h"
+#include "codespot/tools/snowflake.h"
 
 namespace codespot {
 

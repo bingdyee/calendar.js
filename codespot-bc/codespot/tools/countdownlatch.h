@@ -19,7 +19,7 @@ Licensed under the Apache License, Version 2.0 (the "License");
 #include <condition_variable>
 
 
-#include "codespot/utils/common.h"
+#include "codespot/tools/common.h"
 
 namespace codespot {
 
