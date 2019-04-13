@@ -68,6 +68,7 @@ std::string Decrypt(std::string& encoded, std::string& keyPath) {
 			new StringSink(recovered)
 		)
 	);
+    
 	return recovered;
 }
 
