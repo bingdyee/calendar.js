@@ -11,11 +11,7 @@ Eigen/grpc/Crypto++
 #include <iostream>
 #include <thread>
 
-#include "codespot/tools/cryptography.h"
-#include "codespot/tools/logger.h"
-#include "codespot/tools/time_util.h"
-#include "codespot/tools/snowflake.h"
-#include "codespot/tools/countdownlatch.h"
+#include "codespot/core/merkle_tree.h"
 
 using namespace std;
 using namespace codespot;
@@ -23,16 +19,18 @@ using namespace codespot;
 
 int main(int args, char** argv) {
 	std::string data = "I work for smarter cybersecurity with machine learning.";
-	std::string priFile = "D://rsa_key";
-	std::string pubFile = "D://rsa_key.pub";
-	// ExportKeys(priFile, pubFile);
+    std::vector<std::string> contents = {"BlockChain", "AI", "Machine Learning", "Deep Learning"};
 
-	std::string cipher = Encrypt(data, pubFile);
-	std::cout << "Cipher Text: " << cipher << std::endl;
-
-	std::string recovered = Decrypt(cipher, priFile);
-	std::cout << "Recovered Text: " << recovered << std::endl;
-
+    MerkleTree tree;
+    tree.createMerkleTree(contents);
+    std::vector<TreeNode> list = tree.getList();
+    for (TreeNode node : list) {
+        std::cout << node.getName() << ": " << node.getHash() << std::endl;
+    }
+    TreeNode root = tree.getRoot();
+    std::cout << "Root Name: " << root.getName() << std::endl;
+    TreeNode *left = root.getLeft();
+    std::cout << "Root Hash: " << left->getName() << std::endl;
 	system("pause");
 	return 0;
 }
