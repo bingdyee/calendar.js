@@ -2,8 +2,8 @@
 Licensed under the Apache License, Version 2.0 (the "License");
 
 @author: Noa Swartz
-@email: fetaxyu@gmail.com
 @date: 2019-04-13
+@email: fetaxyu@gmail.com
 ==============================================================================*/
 
 #ifndef CODESPOT_CLIENT_P2PCLIENT_H_
