@@ -1,2 +1,2 @@
-# codespot-bc
-BlockChain implemented in C++.
+# Calendar.js
+Perpetual Calendar.
